@@ -30,9 +30,13 @@ Use getFinals to do the following:
 💡 HINT - you should be looking at the stage key inside of the objects
 */
 
-function getFinals(/* code here */) {
-    /* code here */
- }
+function getFinals(arr) {
+    const finals = fifaData.filter((item) => {
+        return item.Stage === 'Final'
+    }) 
+    return finals;
+}
+console.log(getFinals(fifaData))
 
 
 
