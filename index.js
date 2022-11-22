@@ -31,7 +31,7 @@ Use getFinals to do the following:
 */
 
 function getFinals(arr) {
-    const finals = fifaData.filter((item) => {
+    const finals = arr.filter((item) => {
         return item.Stage === 'Final'
     }) 
     return finals;
