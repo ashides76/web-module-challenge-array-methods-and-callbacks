@@ -36,8 +36,7 @@ function getFinals(arr) {
     }) 
     return finals;
 }
-console.log(getFinals(fifaData))
-
+console.log(getFinals(fifaData));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -46,10 +45,15 @@ Use the higher-order function called getYears to do the following:
 2. Receive a callback function as the second parameter that will take getFinals from task 2 as an argument
 3. Return an array called years containing all of the years in the getFinals data set*/
 
-function getYears(/* code here */) {
-    /* code here */
+function getYears(arr, getFinalsCB) {
+    const finals = getFinalsCB(arr);
+    const years = [];
+    finals.forEach((item) => {
+        years.push(item.Year);
+    })
+    return years;
 }
-
+console.log(getYears(fifaData, getFinals))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
